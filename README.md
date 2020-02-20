@@ -4,11 +4,11 @@
 
 AVFoundation 是为数不多的几个媒体框架之一, 可以使用它来播放和创建基于时间的音视频资源. AVFoundation 提供的接口可以精确地处理基于时间的音视频媒体数据. 比如媒体文件的查找、创建、编辑甚至二次编码操作都可以使用 AVFoundation 框架完成. 也可以对从硬件设备获取到的实时视频输入流或者视频回放进行操作处理. 下图中展示了 iOS 上媒体框架的层次结构:
 
-![](https://developer.apple.com/library/prerelease/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/frameworksBlockDiagram_2x.png)
+![](media/frameworksBlockDiagram_2x.png)
 
 OS X 上媒体框架的层级结构图如下:
 
-![](https://developer.apple.com/library/prerelease/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/frameworksBlockDiagramOSX_2x.png)
+![](media/frameworksBlockDiagramOSX_2x.png)
 
 在完成具体的开发任务时, 你应该尽可能的选择更高层次的抽象框架.
 

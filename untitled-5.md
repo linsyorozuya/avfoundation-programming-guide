@@ -6,13 +6,13 @@ AV Foundation 框架中用 `AVAsset` 表示基于时间的视听数据, 比如�
 
 [AVAsset](https://developer.apple.com/reference/avfoundation/avasset) 是 AV Foundation 框架的核心关键类, 它提供了对视听数据的格式无关的抽象. 类之间的关系如下图所示. 大部分情况下, 使用的都是这些类的子类: 使用 composition 的子类创建新的 asset, 使用`AVURLAsset`根据一个指定的 URL 创建 asset.
 
-![](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/avassetHierarchy_2x.png)
+![](media/avassetHierarchy_2x.png)
 
 一个 asset 包含一组 track, 每个 track 都有特定媒体类型, 包括但不限于 audio, video, text, closed captions 以及 subtitles. Asset 对象提供整个资源的信息, 比如时长和标题. Asset 对象也可能包含元数据 \(metadata\), metadata 由 [AVMetadataItem](https://developer.apple.com/reference/avfoundation/avmetadataitem) 类表示.
 
 如下图所示, 一个 track 由 [AVAssetTrack](https://developer.apple.com/reference/avfoundation/avassettrack) 类表示. 简单场景下, 一个 track 代表 audio component, 另一个 track 代表 video component; 复杂场景下, 可能有多个 audio 和 video 重叠的 track.
 
-![](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/avassetAndTracks_2x.png)
+![](media/avassetAndTracks_2x.png)
 
 一个 track 包含多个属性, 比如类型 \(video or audio\), 视觉或听觉特性, 元数据, 以及时间轴 \(表现在其父 asset 中\). 此外, track 还包含一个描述格式的数组. 这个数组中的元素为`CMFormatDescription`对象 \(参见 [CMFormatDescriptionRef](https://developer.apple.com/reference/coremedia/cmformatdescriptionref)\), 用来描述 track 包含的媒体格式信息.
 
@@ -152,7 +152,7 @@ CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(<#A CMSampleBuffer#>
 
 下面的代码示例了如何将`CMSampleBuffer`转换为`UIImage`. 这个转换相当消耗性能, 使用时必须进行谨慎考虑.
 
-```text
+​```text
 - (UIImage *) imageFromSampleBuffer:(CMSampleBufferRef) sampleBuffer
 {
     // Get a CMSampleBuffer's Core Video image buffer for the media data

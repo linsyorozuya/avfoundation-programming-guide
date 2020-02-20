@@ -11,7 +11,7 @@
 
 对于一个 session, 可以配置多个 inputs 和 outputs, 如图所示:
 
-![](https://developer.apple.com/library/prerelease/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/captureOverview_2x.png)
+![](media/captureOverview_2x.png)
 
 对于大部分的应用而言, 这已经足够了. 但是有些情况下, 会涉及到如何表示一个 inputs 的多个端口 \(ports\), 以及这些 ports 如何连接到 outputs.
 
@@ -19,7 +19,7 @@ Capture session 中使用 [AVCaptureConnection](https://developer.apple.com/refe
 
 如下图所示, 当在 session 中添加一个 input 或 output 时, session 会为所有可匹配的 inputs 和 outputs 之前生成 connections\([AVCaptureConnection](https://developer.apple.com/reference/avfoundation/avcaptureconnection)\).
 
-![](https://developer.apple.com/library/prerelease/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/captureDetail_2x.png)
+![](media/captureDetail_2x.png)
 
 可以使用一个 connection 来开启或关闭一个 input 或 output 数据流. 也可以使用 connection 监控一个 audio 频道的码率平均值和峰值.
 
@@ -83,7 +83,7 @@ else {
 
 下图展示了前摄像头 \(`AVCaptureDevicePositionFront`\) 和后摄像头 \(`AVCaptureDevicePositionBack`\):
 
-![](https://developer.apple.com/library/prerelease/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/cameras_2x.png)
+![](media/cameras_2x.png)
 
 下面的代码遍历了所有的可用设备并打印其名称, 如果是视频设备, 则打印其位置:
 

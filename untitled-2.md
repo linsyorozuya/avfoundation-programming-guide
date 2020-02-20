@@ -2,19 +2,19 @@
 
 AVFoundation 框架为音视频编辑提供了功能丰富的类集. 这些 API 的核心称为组件 \(compositions\). composition 是一个或多个媒体资源的 track 的集合. [AVMutableComposition](https://developer.apple.com/reference/avfoundation/avmutablecomposition) 类提供了插入和删除 track, 以及管理其时间顺序的的接口. 下图展示了如何通过已存在的 assets 组合成为一个 composition. 如果你需要顺序合并多个 asset 到一个文件中, 这就刚刚够用. 但是如果要对 track 执行任何自定义的音视频处理操作, 那么你需要分别对音频和视频进行合并.
 
-![](https://developer.apple.com/library/prerelease/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/avmutablecomposition_2x.png)
+![](media/avmutablecomposition_2x.png)
 
 如下图中所示, 使用 [AVMutableAudioMix](https://developer.apple.com/reference/avfoundation/avmutableaudiomix) 类可以对 composition 中的 audio track 进行自定义操作. 你还可以指定 audio track 的最大音量以及为其设置渐变效果.
 
-![](https://developer.apple.com/library/prerelease/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/avmutableaudiomix_2x.png)
+![](media/avmutableaudiomix_2x.png)
 
 如下图所示, 使用 [AVMutableVideoComposition](https://developer.apple.com/reference/avfoundation/avmutablevideocomposition) 类可以直接处理视频 track. 从一个 video composition 输出视频时, 还可以指定输出的尺寸, 缩放比例, 以及帧率. 通过 video composition 的指令 \(instructions,[AVMutableVideoCompositionInstruction](https://developer.apple.com/reference/avfoundation/avmutablevideocompositioninstruction)\), 可以修改视频背景色, 以及设置 layer 的 instructions. Layer 的 instructions\([AVMutableVideoCompositionLayerInstruction](https://developer.apple.com/reference/avfoundation/avmutablevideocompositionlayerinstruction)\) 可以对 video track 实现渐变, 渐变变换, 透明度, 透明度变换等效果. Video composition 还允许通过`animationTool`属性在视频中应用 Core Animation 框架的一些效果.
 
-![](https://developer.apple.com/library/prerelease/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/avmutablevideocomposition_2x.png)
+![](media/avmutablevideocomposition_2x.png)
 
 如下图所示, 要对音视频进行组合, 可以使用 [AVAssetExportSession](https://developer.apple.com/reference/avfoundation/avassetexportsession). 使用 composition 初始化一个 export session, 然后分别其设置`audioMix`和`videoComposition`属性.
 
-![](https://developer.apple.com/library/prerelease/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/puttingitalltogether_2x.png)
+![](media/puttingitalltogether_2x.png)
 
 ## 创建Composition <a id="&#x521B;&#x5EFA;composition"></a>
 

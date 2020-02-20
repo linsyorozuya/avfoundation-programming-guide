@@ -191,7 +191,7 @@ NSArray *times = @[NSValue valueWithCMTime:kCMTimeZero],
 
 ## 视频的剪辑和转码 <a id="&#x89C6;&#x9891;&#x7684;&#x526A;&#x8F91;&#x548C;&#x8F6C;&#x7801;"></a>
 
-[AVAssetExportSession](https://developer.apple.com/reference/avfoundation/avassetexportsession) 对象可以剪辑视频或者对视频进行格式转换. 流程图如下:![](https://developer.apple.com/library/prerelease/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/export_2x.png)
+[AVAssetExportSession](https://developer.apple.com/reference/avfoundation/avassetexportsession) 对象可以剪辑视频或者对视频进行格式转换. 流程图如下:![](media/export_2x.png)
 
 一个导出会话 \(export session\) 用来管理资源的异步导出. 传入一个 asset 来初始化 export session. Export Preset 用来表明导出会话的配置信息, 参见 [allExportPresets](https://developer.apple.com/reference/avfoundation/avassetexportsession/1387150-allexportpresets). 然后配置 export session 指定导出的 URL 和文件格式以及其他信息 \(比如是否因为网络使用而对元数据进行优化\).
 

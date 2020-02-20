@@ -10,7 +10,7 @@
 
 虽然我们的最终目的是播放某个资源, 但并不需要直接向`AVPlayer`对象提供要播放的资源, 而是提供一个`AVPlayerItem`对象. 一个 player item 管理与其相绑定的资源 \(asset\) 的呈现状态. 个 player item 包含多个 player item tracks\( `AVPlayerItemTrack`对象\). 这些变量直接的关系如下图:
 
-![](https://developer.apple.com/library/prerelease/content/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/avplayerLayer_2x.png)
+![](media/avplayerLayer_2x.png)
 
 这种抽象意味着你可以使用不同的 player 来播放给定的 asset, 但是每个 player 又有各自的渲染方式. 下图展示了其中一种可能性, 两个播放器以不同的设置来播放同一个 asset. 通过使用 item tracks, 可以在播放过程中禁用某些 track\(比如禁用音频 track, 即静音\).
 
