@@ -234,7 +234,8 @@ if ([captureConnection isVideoOrientationSupported])
 
 ### 设备配置
 
-要修改设备的捕捉属性, 首先需要使用方法 [lockForConfiguration:](https://developer.apple.com/reference/avfoundation/avcapturedevice/1387810-lockforconfiguration) 锁定设备, 这样可以避免与其他应用的设置产生冲突.
+要在设备上设置捕获属性，必须首先使用[lockForConfiguration:](https://developer.apple.com/reference/avfoundation/avcapturedevice/1387810-lockforconfiguration) 在设备上获取锁。这样可以避免进行可能与其他应用程序中的设置不兼容的更改。以下代码片段说明了如何通过首先确定是否支持该模式，然后尝试锁定设备以进行重新配置来改变设备上的对焦模式。仅在获得锁定后才更改对焦模式，然后立即释放锁定。
+
 
 ```text
 if ([device isFocusModeSupported:AVCaptureFocusModeLocked]) {
